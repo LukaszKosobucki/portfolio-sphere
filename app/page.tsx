@@ -1,37 +1,40 @@
-export default function Home() {
+import fetchContentful from "./components/hoc/fetchContentful";
+import Description from "./components/shared/description";
+import SectionHeader from "./components/shared/section-header";
+import Skill from "./components/shared/skill";
+
+export default async function Home() {
+  const { title, description } = await fetchContentful();
+  const titleSkills = "My skills";
+  const listOfSkills = [
+    { name: "skill 1", image: "placeholder" },
+    { name: "skill 2", image: "placeholder" },
+    { name: "skill 3", image: "placeholder" },
+    { name: "skill 4", image: "placeholder" },
+    { name: "skill 5", image: "placeholder" },
+    { name: "skill 6", image: "placeholder" },
+  ];
   return (
     <div className="bg-white flex flex-col justify-start items-center w-full ">
       <section className="w-[560px]">
-        <h3 className="text-black">about me</h3>
-        <p className="text-black">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          quis dolor ex excepturi. Itaque consectetur nobis commodi
-          reprehenderit totam corporis blanditiis ullam unde. Inventore earum
-          necessitatibus eveniet qui aliquam nemo. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Explicabo quis dolor ex excepturi.
-          Itaque consectetur nobis commodi reprehenderit totam corporis
-          blanditiis ullam unde. Inventore earum necessitatibus eveniet qui
-          aliquam nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Explicabo quis dolor ex excepturi. Itaque consectetur nobis commodi
-          reprehenderit totam corporis blanditiis ullam unde. Inventore earum
-          necessitatibus eveniet qui aliquam nemo.
-        </p>
+        <SectionHeader title={title} />
+        <Description content={description} />
       </section>
       <section className="w-[560px]">
-        <h3 className="text-black">My skills</h3>
+        <SectionHeader title={titleSkills} />
         <div>
-          <span className="text-black">skill 1</span>
-          <span className="text-black">skill 1</span>
-          <span className="text-black">skill 1</span>
-          <span className="text-black">skill 1</span>
-          <span className="text-black">skill 1</span>
-          <span className="text-black">skill 1</span>
-          <span className="text-black">skill 1</span>
+          {listOfSkills.map((skill) => (
+            <Skill name={skill.name} image={skill.image} key={skill.name} />
+          ))}
         </div>
       </section>
 
-      <section className="text-black">Experience section with cards</section>
-      <section className="text-black">Projects section with cards</section>
+      <section className="text-black max-w-[1200px]">
+        Experience section with cards
+      </section>
+      <section className="text-black max-w-[1200px]">
+        Projects section with cards
+      </section>
     </div>
   );
 }

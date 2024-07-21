@@ -47,8 +47,8 @@ const Menu = () => {
             x2="34.4375"
             y2="1.5"
             stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
           <line
             x1="8.6875"
@@ -56,8 +56,8 @@ const Menu = () => {
             x2="34.4375"
             y2="13"
             stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
           <line
             x1="15.875"
@@ -65,8 +65,8 @@ const Menu = () => {
             x2="34.4375"
             y2="24.5"
             stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
         </svg>
       </button>
@@ -91,8 +91,8 @@ const Menu = () => {
                 x2="23"
                 y2="22.5858"
                 stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
               <line
                 x1="1"
@@ -100,8 +100,8 @@ const Menu = () => {
                 x2="22.5858"
                 y2="1"
                 stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </button>
