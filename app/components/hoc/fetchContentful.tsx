@@ -6,16 +6,43 @@ export default async function fetchContentful() {
     environment: "master", // defaults to 'master' if not set
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN ?? "",
   });
+  let contentObj: {
+    [key: string]: any;
+  } = { experience: [], projects: [] };
 
-  const about = await client
-    .getEntry("1zmTm1y1WP0WJrewEidzPn")
-    .then((entry) => {
-      return entry;
+  const content = await client
+    .getEntries()
+    .then((entries) => {
+      entries.items.map((item) => {
+        const id = item?.sys.contentType.sys.id;
+        const key = (
+          item.fields.name
+            ? (item.fields.name as string)
+            : (item.fields.title as string)
+        )
+          .replace(/\s+/g, "")
+          .toLocaleLowerCase();
+        if (id === "experience") {
+          // contentObj.experience.push({ [key]: item.fields });
+          contentObj.experience = [
+            ...contentObj.experience,
+            {
+              ...item.fields,
+              url: item.fields.image?.fields.file.url,
+            },
+          ];
+        } else if (id === "project") {
+          contentObj.projects = [
+            ...contentObj.projects,
+            { ...item.fields, url: item.fields.image?.fields.file.url },
+          ];
+        } else {
+          contentObj[key] = item.fields;
+        }
+      });
+      return contentObj;
     })
     .catch(console.error);
 
-  return {
-    title: about?.fields.title as string,
-    description: about?.fields.description,
-  };
+  return content;
 }
