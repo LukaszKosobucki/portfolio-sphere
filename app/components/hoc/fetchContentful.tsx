@@ -8,7 +8,7 @@ export default async function fetchContentful() {
   });
   let contentObj: {
     [key: string]: any;
-  } = { experience: [], projects: [] };
+  } = { experience: [], projects: [], skills: [] };
 
   const content = await client
     .getEntries()
@@ -36,6 +36,11 @@ export default async function fetchContentful() {
             ...contentObj.projects,
             { ...item.fields, url: item.fields.image?.fields.file.url },
           ];
+        } else if (id === "skill") {
+          contentObj.skills = [
+            ...contentObj.skills,
+            { ...item.fields, url: item.fields.image?.fields.file.url },
+          ];
         } else {
           contentObj[key] = item.fields;
         }
@@ -44,5 +49,5 @@ export default async function fetchContentful() {
     })
     .catch(console.error);
 
-  return content;
+  return { ...content };
 }

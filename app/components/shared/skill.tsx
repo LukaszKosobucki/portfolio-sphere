@@ -1,14 +1,8 @@
-export default function Skill({
-  name,
-  image,
-}: {
-  name: string;
-  image: string;
-}) {
+export default function Skill({ skill }: { skill: any }) {
   return (
-    <div>
-      <img src={image} alt="" />
-      <span className="text-base text-black">{name}</span>
+    <div className="flex flex-row gap-[4px] items-start h-[16px] mt-[20px]">
+      <img src={`https:${skill.url}`} alt="" className="w-[16px] h-[16px]" />
+      <span className="text-base text-black ">{skill.name}</span>
     </div>
   );
 }
