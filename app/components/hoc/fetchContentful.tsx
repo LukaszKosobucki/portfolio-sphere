@@ -24,23 +24,11 @@ export default async function fetchContentful() {
           .toLocaleLowerCase();
         if (id === "experience") {
           // contentObj.experience.push({ [key]: item.fields });
-          contentObj.experience = [
-            ...contentObj.experience,
-            {
-              ...item.fields,
-              url: item.fields.image?.fields.file.url,
-            },
-          ];
+          contentObj.experience = [...contentObj.experience, item.fields];
         } else if (id === "project") {
-          contentObj.projects = [
-            ...contentObj.projects,
-            { ...item.fields, url: item.fields.image?.fields.file.url },
-          ];
+          contentObj.projects = [...contentObj.projects, item.fields];
         } else if (id === "skill") {
-          contentObj.skills = [
-            ...contentObj.skills,
-            { ...item.fields, url: item.fields.image?.fields.file.url },
-          ];
+          contentObj.skills = [...contentObj.skills, item.fields];
         } else {
           contentObj[key] = item.fields;
         }

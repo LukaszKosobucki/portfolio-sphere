@@ -6,9 +6,7 @@ export default function Header(props: any) {
   const { header } = props;
   return (
     <main className="bg-black min-w-full h-[100vh] justify-center items-center flex-col flex">
-      <header className="absolute top-[60px] w-full flex flex-row justify-between px-[120px]">
-        <div className="text-white">logo</div>
-
+      <header className="absolute top-[60px] w-full flex flex-row justify-end px-[120px]">
         <Menu />
       </header>
       <div className="flex flex-col justify-center items-center">

@@ -2,7 +2,7 @@ export default function Card({ card }: { card: any }) {
   return (
     <a className={`max-w-[360px] max-h-[460px] relative cursor-pointer`}>
       <img
-        src={"https:" + card.url}
+        src={`https:${card.image.fields.file.url}`}
         alt=""
         className="w-[360px] h-[460px] grayscale hover:grayscale-0 duration-400 transition-all ease-in-out group"
       />

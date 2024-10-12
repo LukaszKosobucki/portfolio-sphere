@@ -7,14 +7,6 @@ import Skill from "./components/shared/skill";
 export default async function Home() {
   const {aboutme, experience, projects, skills} = await fetchContentful();
   const titleSkills = "My skills";
-  const listOfSkills = [
-    { name: "skill 1", image: "placeholder" },
-    { name: "skill 2", image: "placeholder" },
-    { name: "skill 3", image: "placeholder" },
-    { name: "skill 4", image: "placeholder" },
-    { name: "skill 5", image: "placeholder" },
-    { name: "skill 6", image: "placeholder" },
-  ];
 
   return (
     <div className="bg-white flex flex-col justify-start items-center w-full ">
@@ -24,7 +16,7 @@ export default async function Home() {
       </section>
       <section className="w-[560px] pt-[60px]">
         <SectionHeader title={titleSkills} />
-        <div>
+        <div className="flex flex-row gap-x-[38px] gap-y-[16px] flex-wrap mt-[20px]">
           {skills.map((skill) => (
             <Skill skill={skill} key={skill.name} />
           ))}
