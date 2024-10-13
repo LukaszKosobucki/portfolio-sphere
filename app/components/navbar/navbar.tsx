@@ -1,4 +1,5 @@
 import Hamburger from "@/app/components/hambuger/hamburger";
+import { basePath } from "@/app/utils/basePath";
 import { SITE, SOCIALS } from "@/app/utils/consts";
 import { useEffect, useState } from "react";
 import Container from "./container";
@@ -51,7 +52,7 @@ function Navbar() {
                   className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
                 >
                   <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-                    <use href={`/social.svg#${SOCIAL.ICON}`} />
+                    <use href={`${basePath}/social.svg#${SOCIAL.ICON}`} />
                   </svg>
                 </a>
               ))}
