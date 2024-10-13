@@ -28,7 +28,7 @@ function Hamburger() {
             id="x"
             viewBox="0 0 24 24"
             fill="none"
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
           >
@@ -40,7 +40,7 @@ function Hamburger() {
             id="menu"
             viewBox="0 0 24 24"
             fill="none"
-            stroke-linecap="round"
+            strokeLinecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
           >

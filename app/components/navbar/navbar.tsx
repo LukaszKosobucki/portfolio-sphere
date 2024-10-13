@@ -36,9 +36,6 @@ function Navbar() {
               href="/"
               className="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
             >
-              <svg className="size-6 fill-current">
-                <use href="/brand.svg#brand"></use>
-              </svg>
               <div>{SITE.TITLE}</div>
               {/* TODO change to page title taken from somewhere else */}
             </a>

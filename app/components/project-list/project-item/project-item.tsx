@@ -11,7 +11,7 @@ function ProjectItem({ entry, pill }: { entry: {}; pill: boolean }) {
           <div className="flex flex-wrap items-center gap-2">
             {pill && (
               <div className="text-sm capitalize px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25">
-                "project"
+                project
               </div>
             )}
             <div className="text-sm uppercase">{"01.02.2019"}</div>
@@ -47,7 +47,7 @@ function ProjectItem({ entry, pill }: { entry: {}; pill: boolean }) {
           viewBox="0 0 24 24"
           fill="none"
           stroke-width="2.5"
-          stroke-linecap="round"
+          strokeLinecap="round"
           stroke-linejoin="round"
           className="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
         >

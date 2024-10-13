@@ -28,7 +28,7 @@ function Footer() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke-width="2.5"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   className="stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-90"
                 >
