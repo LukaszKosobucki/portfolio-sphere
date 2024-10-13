@@ -94,7 +94,7 @@ function Footer() {
                       className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
                     >
                       <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-                        <use href={`/public/social.svg#${SOCIAL.ICON}`} />
+                        <use href={`/social.svg#${SOCIAL.ICON}`} />
                       </svg>
                     </a>
                   ))}
