@@ -47,6 +47,7 @@ function Navbar() {
             <nav className="hidden md:flex items-center justify-center text-sm gap-1">
               {SOCIALS.map((SOCIAL) => (
                 <a
+                  key={SOCIAL.NAME}
                   href={SOCIAL.HREF}
                   target="_blank"
                   aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}

@@ -1,7 +1,7 @@
 import ProjectItem from "./project-item/project-item";
 
 function ProjectList() {
-  const projects = [{}, {}];
+  const projects = [{ name: 1 }, { name: 2 }];
   return (
     <section className="animate">
       <div className="space-y-4">
@@ -10,7 +10,7 @@ function ProjectList() {
         </div>
         <ul className="space-y-4">
           {projects.map((project) => (
-            <ProjectItem entry={project} pill={false} />
+            <ProjectItem key={project.name} entry={project} pill={false} />
           ))}
         </ul>
       </div>

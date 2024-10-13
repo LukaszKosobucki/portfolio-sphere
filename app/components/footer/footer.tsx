@@ -87,6 +87,7 @@ function Footer() {
                 <div className="flex flex-wrap gap-1 items-center justify-center">
                   {SOCIALS.map((SOCIAL) => (
                     <a
+                      key={SOCIAL.NAME}
                       href={SOCIAL.HREF}
                       target="_blank"
                       aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}

@@ -30,7 +30,10 @@ function ProjectItem({ entry, pill }: { entry: {}; pill: boolean }) {
               (
                 tag: string // this line has an error; Parameter 'tag' implicitly has an 'any' type.ts(7006)
               ) => (
-                <li className="text-xs uppercase py-0.5 px-1 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75">
+                <li
+                  key={tag}
+                  className="text-xs uppercase py-0.5 px-1 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75"
+                >
                   {tag}
                 </li>
               )

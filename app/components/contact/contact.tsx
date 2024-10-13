@@ -5,12 +5,12 @@ function Contact() {
     <section className="animate">
       <div>
         <p className="font-semibold text-black dark:text-white">
-          Let's Connect
+          Let&apos;s Connect
         </p>
         <p>Reach out to me via email or on social media.</p>
-        <div className="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
+        <div className="grid grid-rows-3 gap-y-2 mt-4 auto-cols-min">
           {SOCIALS.map((social) => (
-            <>
+            <section key={social.NAME} className="flex flex-row gap-2">
               <div className="col-span-1 flex items-center gap-1">
                 <span className="whitespace-nowrap truncate">
                   {social.NAME}
@@ -27,7 +27,7 @@ function Contact() {
                   </span>
                 </a>
               </div>
-            </>
+            </section>
           ))}
         </div>
       </div>

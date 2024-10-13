@@ -3,7 +3,7 @@ import Container from "../navbar/container";
 import WorkItem from "./work-item/work-item";
 
 function WorkList() {
-  const work = [{}, {}];
+  const work = [{ name: 1 }, { name: 2 }];
 
   return (
     <main>
@@ -17,7 +17,7 @@ function WorkList() {
         <Container size="md">
           <ul>
             {work.map((entry) => (
-              <WorkItem entry={entry} />
+              <WorkItem key={entry.name} entry={entry} />
             ))}
           </ul>
         </Container>

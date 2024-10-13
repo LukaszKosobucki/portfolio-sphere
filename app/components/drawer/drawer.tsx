@@ -13,6 +13,7 @@ function Drawer() {
       <nav className="flex flex-col items-center space-y-2">
         {SOCIALS.map((SOCIAL) => (
           <a
+            key={SOCIAL.NAME}
             href={SOCIAL.HREF}
             target="_blank"
             aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
