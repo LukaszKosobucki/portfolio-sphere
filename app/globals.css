@@ -25,6 +25,7 @@ html {
   color-scheme: light;
   background-color: white;
   font-family: "Atkinson", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html.dark {

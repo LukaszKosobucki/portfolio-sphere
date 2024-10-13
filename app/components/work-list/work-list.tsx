@@ -6,7 +6,7 @@ function WorkList() {
   const work = [{ name: 1 }, { name: 2 }];
 
   return (
-    <main>
+    <main id="work" className="scroll-mt-16">
       <div className="pt-5 pb-5">
         <Container size="md">
           <div className="animate page-heading">{WORK.TITLE}</div>

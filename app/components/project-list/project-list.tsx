@@ -3,7 +3,7 @@ import ProjectItem from "./project-item/project-item";
 function ProjectList() {
   const projects = [{ name: 1 }, { name: 2 }];
   return (
-    <section className="animate">
+    <section id="projects" className="animate scroll-mt-16">
       <div className="space-y-4">
         <div className="flex justify-between">
           <p className="font-semibold text-black dark:text-white">Projects</p>
