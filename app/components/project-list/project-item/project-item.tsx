@@ -46,9 +46,9 @@ function ProjectItem({ entry, pill }: { entry: {}; pill: boolean }) {
           height="20"
           viewBox="0 0 24 24"
           fill="none"
-          stroke-width="2.5"
+          strokeWidth="2.5"
           strokeLinecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
           className="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
         >
           <line

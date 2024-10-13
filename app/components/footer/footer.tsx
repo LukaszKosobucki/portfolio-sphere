@@ -27,9 +27,9 @@ function Footer() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke-width="2.5"
+                  strokeWidth="2.5"
                   strokeLinecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                   className="stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-90"
                 >
                   <line
@@ -94,7 +94,7 @@ function Footer() {
                       className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
                     >
                       <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-                        <use href={`/social.svg#${SOCIAL.ICON}`} />
+                        <use href={`/public/social.svg#${SOCIAL.ICON}`} />
                       </svg>
                     </a>
                   ))}
