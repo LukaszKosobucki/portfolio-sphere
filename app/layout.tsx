@@ -1,6 +1,7 @@
 "use client";
 
 import Drawer from "./components/drawer/drawer";
+import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";
 import "./globals.css";
 import Providers from "./providers";
@@ -21,8 +22,8 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <Drawer />
-
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

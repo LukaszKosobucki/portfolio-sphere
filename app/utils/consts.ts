@@ -4,16 +4,29 @@ export type Socials = {
   TEXT: string;
   HREF: string;
 }[];
-
-export interface Site {
+export type Page = {
   TITLE: string;
   DESCRIPTION: string;
+};
+
+export interface Site extends Page {
   AUTHOR: string;
 }
 
+export const WORK: Page = {
+  TITLE: "Work",
+  DESCRIPTION: "Places I have worked.",
+};
+
+// Projects Page
+export const PROJECTS: Page = {
+  TITLE: "Projects",
+  DESCRIPTION: "Recent projects I have worked on.",
+};
+
 // Global
 export const SITE: Site = {
-  TITLE: "Portfolio",
+  TITLE: "Lukasz Kosobucki",
   DESCRIPTION:
     "Learn more about my projects and work experience as a Frontend Software Engineer",
   AUTHOR: "Lukasz Kosobucki",
