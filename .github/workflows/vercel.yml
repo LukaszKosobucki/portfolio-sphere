@@ -7,9 +7,6 @@ on:
     # this will deploy data files only when no release is created
     branches:
       - main
-    paths:
-      - "data/**"
-      - "pages/docs/**"
   workflow_dispatch:
 
 jobs:
