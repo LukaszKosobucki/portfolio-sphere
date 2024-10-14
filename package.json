@@ -14,13 +14,13 @@
     "@tailwindcss/typography": "^0.5.15",
     "clsx": "^2.1.1",
     "contentful": "^10.12.11",
-    "gh-pages": "^6.2.0",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
     "prettier": "^3.3.3",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.5.3"
+    "tailwind-merge": "^2.5.3",
+    "vercel": "^37.8.0"
   },
   "devDependencies": {
     "typescript": "^5",
