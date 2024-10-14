@@ -30,4 +30,3 @@ jobs:
           echo "Vercel file usage percentage" >> $GITHUB_STEP_SUMMARY
           echo "$PERCENTAGE" >> $GITHUB_STEP_SUMMARY
           vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > domain.txt
-          vercel alias --scope ${{ secrets.VERCEL_TEAM_ID }} --token ${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` biodrop-preview.vercel.app
