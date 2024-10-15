@@ -1,3 +1,5 @@
+"use client";
+
 import { SITE, SOCIALS } from "@/app/utils/consts";
 import Container from "../navbar/container";
 

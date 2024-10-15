@@ -1,3 +1,5 @@
+"use client";
+
 import Hamburger from "@/app/components/hambuger/hamburger";
 import { SITE, SOCIALS } from "@/app/utils/consts";
 import { useEffect, useState } from "react";
@@ -8,7 +10,6 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the page is scrolled at least 1px
       if (window.scrollY > 0) {
         setScrolled(true);
       } else {
@@ -24,6 +25,7 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <header
       id="header"
@@ -37,7 +39,6 @@ function Navbar() {
               className="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
             >
               <div>{SITE.TITLE}</div>
-              {/* TODO change to page title taken from somewhere else */}
             </a>
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

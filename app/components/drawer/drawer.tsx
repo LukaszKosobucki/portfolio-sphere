@@ -1,3 +1,4 @@
+"use client";
 import { useGlobalContext } from "@/app/context/global-context";
 import { SITE, SOCIALS } from "@/app/utils/consts";
 import ThemeSwitcher from "../theme-switcher/theme-switcher";
