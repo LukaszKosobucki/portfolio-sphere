@@ -4,10 +4,12 @@ export const fetchSpecificEntries = async ({
   content_type,
   title,
   multiple = false,
+  order,
 }: {
   content_type: string;
   title?: string;
   multiple?: boolean;
+  order?: string;
 }) => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID ?? "",
@@ -19,6 +21,7 @@ export const fetchSpecificEntries = async ({
     content_type,
     ...(title && { "fields.title": title }),
     limit: multiple ? 100 : 1,
+    order,
   };
 
   const entries = await client.getEntries(query).then((res) => res.items);
