@@ -9,16 +9,35 @@ import Introduction from "./components/introduction/introduction";
 import Navbar from "./components/navbar/navbar";
 import ProjectList from "./components/project-list/project-list";
 import WorkList from "./components/work-list/work-list";
+import { fetchSpecificEntries } from "./services/contentful";
 
-export default function Home() {
+export default async function Home() {
+  const socials = await fetchSpecificEntries({
+    content_type: "socialInfo",
+    multiple: true,
+    order: "sys.createdAt",
+  });
+
+  const seoResponse = await fetchSpecificEntries({
+    content_type: "seoConfig",
+    title: "LK Portfolio",
+  });
+
   return (
     <main>
-      <Navbar />
-      <Drawer />
+      <Navbar
+        socials={socials}
+        author={`${seoResponse[0].fields.author}`}
+        title={`${seoResponse[0].fields.seoTitle}`}
+      />
+      <Drawer socials={socials} title={`${seoResponse[0].fields.seoTitle}`} />
       <Particles />
       <Stars />
       <Galaxy />
-      <Hero />
+      <Hero
+        author={`${seoResponse[0].fields.author}`}
+        introduction={`${seoResponse[0].fields.introduction}`}
+      />
       <Introduction />
       <div className="relative bg-white dark:bg-black">
         <div className="mx-auto max-w-screen-sm space-y-24">
@@ -32,7 +51,7 @@ export default function Home() {
       </div>
       <div className="relative bg-white dark:bg-black">
         <div className="mx-auto max-w-screen-sm space-y-24 pb-16 p-5">
-          <Contact />
+          <Contact socials={socials} />
         </div>
       </div>
       <Footer />
