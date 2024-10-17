@@ -1,9 +1,15 @@
 "use client";
 
-import { SITE, SOCIALS } from "@/app/utils/consts";
+import { Entry, EntrySkeletonType } from "contentful";
 import Container from "../navbar/container";
 
-function Footer() {
+function Footer({
+  socials,
+  title,
+}: {
+  socials: Entry<EntrySkeletonType, undefined, string>[];
+  title: string;
+}) {
   const goBackToTop = (event: any) => {
     event.preventDefault();
     window.scrollTo({
@@ -60,9 +66,32 @@ function Footer() {
               <div className="flex flex-col items-center sm:items-start">
                 <a
                   href="/"
-                  className="flex gap-1 w-fit font-semibold text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+                  className="group flex gap-1 w-fit font-semibold text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
                 >
-                  {SITE.TITLE}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="stroke-current group-hover:stroke-black group-hover:dark:stroke-white -rotate-90"
+                  >
+                    <line
+                      x1="19"
+                      y1="12"
+                      x2="5"
+                      y2="12"
+                      className="scale-x-0 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+                    />
+                    <polyline
+                      points="12 19 5 12 12 5"
+                      className="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+                    />
+                  </svg>
+                  Download my CV
                 </a>
               </div>
               <div className="flex gap-2 justify-center sm:justify-end items-center">
@@ -87,19 +116,20 @@ function Footer() {
 
               <div className="order-1 sm:order-2 flex justify-center sm:justify-end">
                 <div className="flex flex-wrap gap-1 items-center justify-center">
-                  {SOCIALS.map((SOCIAL) => (
-                    <a
-                      key={SOCIAL.NAME}
-                      href={SOCIAL.HREF}
-                      target="_blank"
-                      aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
-                      className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
-                    >
-                      <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-                        <use href={`/social.svg#${SOCIAL.ICON}`} />
-                      </svg>
-                    </a>
-                  ))}
+                  {socials &&
+                    socials.map((social) => (
+                      <a
+                        key={`${social.fields.name}`}
+                        href={`${social.fields.href}`}
+                        target="_blank"
+                        aria-label={`${title} on ${social.fields.name}`}
+                        className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                      >
+                        <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                          <use href={`/social.svg#${social.fields.icon}`} />
+                        </svg>
+                      </a>
+                    ))}
                 </div>
               </div>
             </div>
