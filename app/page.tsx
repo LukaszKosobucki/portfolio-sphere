@@ -23,6 +23,11 @@ export default async function Home() {
     title: "LK Portfolio",
   });
 
+  const resume = await fetchSpecificEntries({
+    content_type: "document",
+    title: "resume",
+  });
+
   return (
     <main>
       <Navbar
@@ -54,7 +59,11 @@ export default async function Home() {
           <Contact socials={socials} />
         </div>
       </div>
-      <Footer socials={socials} title={`${seoResponse[0].fields.seoTitle}`} />
+      <Footer
+        socials={socials}
+        title={`${seoResponse[0].fields.seoTitle}`}
+        resume={resume}
+      />
     </main>
   );
 }
