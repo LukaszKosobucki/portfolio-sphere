@@ -31,6 +31,8 @@ function Hamburger() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="1.5"
+            width={24}
+            height={24}
           >
             <path d="M18 6L6 18" />
             <path d="M6 6l12 12" />
@@ -43,6 +45,8 @@ function Hamburger() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="1.5"
+            width={24}
+            height={24}
           >
             <path d="M3 12h18" />
             <path d="M3 6h18" />

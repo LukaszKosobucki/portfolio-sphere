@@ -1,4 +1,10 @@
-function Hero() {
+function Hero({
+  author,
+  introduction,
+}: {
+  author: string;
+  introduction: string;
+}) {
   return (
     <section className="relative h-screen w-full">
       <div
@@ -27,10 +33,10 @@ function Hero() {
               Hello, I am ...
             </p>
             <p className="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white">
-              Astro Sphere
+              {author}
             </p>
             <p className="animated text-sm md:text-base lg:text-lg opacity-75">
-              Currently designing products for humans.
+              {introduction}
             </p>
             <div
               id="ctaButtons"

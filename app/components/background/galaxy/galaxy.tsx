@@ -1,3 +1,5 @@
+"use client";
+
 import MeteorShower from "./meteor-shower/meteor-shower";
 import TwinklingStars from "./twinkling-stars/twinkling-stars";
 

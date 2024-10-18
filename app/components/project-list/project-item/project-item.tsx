@@ -1,43 +1,41 @@
-function ProjectItem({ entry, pill }: { entry: {}; pill: boolean }) {
-  const tags = ["tag1", "tag2", "tag3"];
+import { formatDate } from "@/app/utils/format-date";
+import { Entry, EntrySkeletonType } from "contentful";
+
+function ProjectItem({
+  entry,
+}: {
+  entry: Entry<EntrySkeletonType, undefined, string>;
+}) {
   return (
     <li>
       <a
         target="_blank"
-        href={`https://www.google.com`}
+        href={entry.fields.url as string}
         className="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
       >
         <div className="w-full group-hover:text-black group-hover:dark:text-white blend">
           <div className="flex flex-wrap items-center gap-2">
-            {pill && (
-              <div className="text-sm capitalize px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25">
-                project
-              </div>
-            )}
-            <div className="text-sm uppercase">{"01.02.2019"}</div>
+            <div className="text-sm uppercase">
+              {formatDate(entry.fields.date as string)}
+            </div>
           </div>
           <div className="font-semibold mt-3 text-black dark:text-white">
-            {/* {entry.data.title} */}
-            title
+            {entry.fields.name as string}
           </div>
 
           <div className="text-sm line-clamp-2">
-            {/* {entry.data.summary} */}
-            Lorem Ipsum dolor sit amet
+            {entry.fields.description as string}
           </div>
           <ul className="flex flex-wrap mt-2 gap-1">
-            {tags.map(
-              (
-                tag: string // this line has an error; Parameter 'tag' implicitly has an 'any' type.ts(7006)
-              ) => (
+            {entry.fields.tags &&
+              (entry.fields.tags as Array<string>).map((tag: string) => (
                 <li
                   key={tag}
                   className="text-xs uppercase py-0.5 px-1 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75"
                 >
                   {tag}
                 </li>
-              )
-            )}
+              ))}
           </ul>
         </div>
         <svg

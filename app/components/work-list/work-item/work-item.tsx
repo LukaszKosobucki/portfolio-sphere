@@ -1,37 +1,29 @@
-function WorkItem({ entry }: { entry: {} }) {
-  function formatWorkDate(input: Date | string) {
-    if (typeof input === "string") return input;
+import { formatDate } from "@/app/utils/format-date";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
+import { Entry, EntrySkeletonType } from "contentful";
 
-    const month = input.toLocaleDateString("en-US", {
-      month: "short",
-    });
-
-    const year = new Date(input).getFullYear();
-    return `${month} ${year}`;
-  }
+function WorkItem({
+  entry,
+}: {
+  entry: Entry<EntrySkeletonType, undefined, string>;
+}) {
   return (
     <li className="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
       <div className="text-sm uppercase mb-4">
-        {/* {entry.data.dateStart} - {entry.data.dateEnd} */}
-        01.12.2019 - 02.13.2023
+        {formatDate(entry.fields.dateStart as string)} -{" "}
+        {entry.fields.dateEnd
+          ? formatDate(entry.fields.dateEnd as string)
+          : "continuing"}
       </div>
       <div className="text-black dark:text-white font-semibold">
-        {/* {entry.data.company} */}
-        YouGov
+        {entry.fields.name as string}
       </div>
       <div className="text-sm font-semibold">
-        {/* {entry.data.role} */}
-        Junior Software Engineer
+        {entry.fields.workTitle as string}
       </div>
       <article className="prose dark:prose-invert">
-        {/* <entry.Content /> */}
-        Working in an international project team, I focused on creating a
-        proof-of-concept app in the mobile service industry to acquire potential
-        clients. I facilitated collaboration by establishing a monorepository
-        and used module federation for flexible technology stack development,
-        leveraging cutting-edge technologies like the latest Next.js within an
-        Nx monorepo. Additionally, I set up CI/CD processes and developed a
-        self-hosted library on GitLab.
+        {documentToReactComponents(entry.fields.description as Document)}
       </article>
     </li>
   );

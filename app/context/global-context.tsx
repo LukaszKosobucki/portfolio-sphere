@@ -1,9 +1,12 @@
+"use client";
+
 import {
   createContext,
   Dispatch,
   ReactNode,
   SetStateAction,
   useContext,
+  useEffect,
   useState,
 } from "react";
 
@@ -19,6 +22,15 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 // Create the provider component
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    const animateElements = document.querySelectorAll(".animate");
+    animateElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add("show");
+      }, index * 150);
+    });
+  }, []);
 
   return (
     <GlobalContext.Provider value={{ isDrawerOpen, setIsDrawerOpen }}>

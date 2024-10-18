@@ -1,14 +1,23 @@
+"use client";
+
 import Hamburger from "@/app/components/hambuger/hamburger";
-import { SITE, SOCIALS } from "@/app/utils/consts";
+import { Entry, EntrySkeletonType } from "contentful";
 import { useEffect, useState } from "react";
 import Container from "./container";
 
-function Navbar() {
+function Navbar({
+  socials,
+  author,
+  title,
+}: {
+  socials: Entry<EntrySkeletonType, undefined, string>[];
+  author: string;
+  title: string;
+}) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the page is scrolled at least 1px
       if (window.scrollY > 0) {
         setScrolled(true);
       } else {
@@ -24,6 +33,7 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <header
       id="header"
@@ -36,25 +46,25 @@ function Navbar() {
               href="/"
               className="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
             >
-              <div>{SITE.TITLE}</div>
-              {/* TODO change to page title taken from somewhere else */}
+              <div>{author}</div>
             </a>
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <nav className="hidden md:flex items-center justify-center text-sm gap-1">
-              {SOCIALS.map((SOCIAL) => (
-                <a
-                  key={SOCIAL.NAME}
-                  href={SOCIAL.HREF}
-                  target="_blank"
-                  aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
-                  className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
-                >
-                  <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-                    <use href={`/social.svg#${SOCIAL.ICON}`} />
-                  </svg>
-                </a>
-              ))}
+              {socials &&
+                socials.map((social) => (
+                  <a
+                    key={`${social.fields.name}`}
+                    href={`${social.fields.href}`}
+                    target="_blank"
+                    aria-label={`${title} on ${social.fields.name}`}
+                    className="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                  >
+                    <svg className="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                      <use href={`/social.svg#${social.fields.icon}`} />
+                    </svg>
+                  </a>
+                ))}
             </nav>
           </div>
 
