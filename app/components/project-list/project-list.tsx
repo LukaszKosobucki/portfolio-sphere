@@ -15,10 +15,7 @@ async function ProjectList() {
         </div>
         <ul className="space-y-4">
           {projects.map((project) => (
-            <ProjectItem
-              key={project.fields.name?.toString()}
-              entry={project}
-            />
+            <ProjectItem key={project.fields.name?.toString()} entry={project} />
           ))}
         </ul>
       </div>

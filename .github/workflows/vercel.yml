@@ -6,15 +6,17 @@ env:
   CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
   CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
 on:
-  push:
-    # this will deploy data files only when no release is created
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
     branches:
       - main
   workflow_dispatch:
 
 jobs:
   deploy:
-    if: github.repository == 'LukaszKosobucki/portfolio-sphere'
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

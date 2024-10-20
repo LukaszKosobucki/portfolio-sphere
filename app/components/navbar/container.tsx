@@ -14,7 +14,7 @@ const Container: React.FC<Props> = ({ size, children }) => {
         size === "md" && "max-w-screen-md",
         size === "lg" && "max-w-screen-lg",
         size === "xl" && "max-w-screen-xl",
-        size === "2xl" && "max-w-screen-2xl"
+        size === "2xl" && "max-w-screen-2xl",
       )}
     >
       {children}
