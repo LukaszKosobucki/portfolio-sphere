@@ -10,10 +10,8 @@ function TwinklingStars() {
     const twinkleStar = twinkleStarTemplate.cloneNode(true) as HTMLElement;
     const galaxy = document.getElementById("galaxy");
     twinkleStar.style.position = "absolute";
-    twinkleStar.style.left =
-      Math.floor(Math.random() * window.innerWidth) + "px";
-    twinkleStar.style.top =
-      Math.floor(Math.random() * (window.innerHeight / 3)) + "px";
+    twinkleStar.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+    twinkleStar.style.top = Math.floor(Math.random() * (window.innerHeight / 3)) + "px";
     twinkleStar.style.width =
       window.innerWidth < 768
         ? Math.floor(Math.random() * (15 - 7.5 + 1) + 7.5) + "px"

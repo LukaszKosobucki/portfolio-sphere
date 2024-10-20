@@ -20,7 +20,7 @@ function Hamburger() {
           "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
           "stroke-current hover:stroke-black hover:dark:stroke-white",
           "border border-black/10 dark:border-white/25",
-          "transition-colors duration-300 ease-in-out"
+          "transition-colors duration-300 ease-in-out",
         )}
       >
         {isDrawerOpen ? (

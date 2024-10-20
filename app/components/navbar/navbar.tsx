@@ -35,10 +35,7 @@ function Navbar({
   }, []);
 
   return (
-    <header
-      id="header"
-      className={` ${scrolled ? "scrolled" : ""} fixed top-0 w-full h-16 z-50`}
-    >
+    <header id="header" className={` ${scrolled ? "scrolled" : ""} fixed top-0 w-full h-16 z-50`}>
       <Container size="md">
         <div className="relative h-full w-full">
           <div className="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">

@@ -59,11 +59,7 @@ export default async function Home() {
           <Contact socials={socials} />
         </div>
       </div>
-      <Footer
-        socials={socials}
-        title={`${seoResponse[0].fields.seoTitle}`}
-        resume={resume}
-      />
+      <Footer socials={socials} title={`${seoResponse[0].fields.seoTitle}`} resume={resume} />
     </main>
   );
 }

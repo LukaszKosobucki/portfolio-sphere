@@ -15,17 +15,13 @@ function ProjectItem({
       >
         <div className="w-full group-hover:text-black group-hover:dark:text-white blend">
           <div className="flex flex-wrap items-center gap-2">
-            <div className="text-sm uppercase">
-              {formatDate(entry.fields.date as string)}
-            </div>
+            <div className="text-sm uppercase">{formatDate(entry.fields.date as string)}</div>
           </div>
           <div className="font-semibold mt-3 text-black dark:text-white">
             {entry.fields.name as string}
           </div>
 
-          <div className="text-sm line-clamp-2">
-            {entry.fields.description as string}
-          </div>
+          <div className="text-sm line-clamp-2">{entry.fields.description as string}</div>
           <ul className="flex flex-wrap mt-2 gap-1">
             {entry.fields.tags &&
               (entry.fields.tags as Array<string>).map((tag: string) => (

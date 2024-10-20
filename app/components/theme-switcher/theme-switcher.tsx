@@ -12,9 +12,7 @@ export default function ThemeSwitcher({
 
   return (
     <button
-      onClick={() =>
-        resolvedTheme === "light" ? setTheme("dark") : setTheme("light")
-      }
+      onClick={() => (resolvedTheme === "light" ? setTheme("dark") : setTheme("light"))}
       id="header-theme-button"
       aria-label={`Toggle light and dark theme`}
       className={cn(
@@ -23,7 +21,7 @@ export default function ThemeSwitcher({
         "bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
         "stroke-current hover:stroke-black hover:dark:stroke-white",
         "border border-black/10 dark:border-white/25",
-        "transition-colors duration-300 ease-in-out"
+        "transition-colors duration-300 ease-in-out",
       )}
     >
       {resolvedTheme === "light" ? (

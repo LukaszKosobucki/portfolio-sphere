@@ -7,10 +7,7 @@ function Hero({
 }) {
   return (
     <section className="relative h-screen w-full">
-      <div
-        id="planetcont"
-        className="animate absolute inset-0 top-1/4 overflow-hidden"
-      >
+      <div id="planetcont" className="animate absolute inset-0 top-1/4 overflow-hidden">
         <div
           id="crescent"
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-gradient-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%"
@@ -35,13 +32,8 @@ function Hero({
             <p className="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white">
               {author}
             </p>
-            <p className="animated text-sm md:text-base lg:text-lg opacity-75">
-              {introduction}
-            </p>
-            <div
-              id="ctaButtons"
-              className="animated flex flex-wrap gap-4 justify-center mt-5"
-            >
+            <p className="animated text-sm md:text-base lg:text-lg opacity-75">{introduction}</p>
+            <div id="ctaButtons" className="animated flex flex-wrap gap-4 justify-center mt-5">
               <a
                 href="#projects"
                 className="py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend"
