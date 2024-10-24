@@ -39,9 +39,22 @@ jobs:
       - name: Lint
         run: bun format
 
+  test:
+    name: Test project with bun:test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: oven-sh/setup-bun@v2
+      - name: Install dependencies
+        run: bun install
+      - name: Lint
+        run: bun test
+
   build:
     name: Build project with next.js
-    needs: [lint, format]
+    needs: [lint, format, test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
