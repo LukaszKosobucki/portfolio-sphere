@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, test } from "bun:test";
+import { fakeTimers } from "../utils/tests/fake-timers";
 import { GlobalProvider, useGlobalContext } from "./global-context";
 
 const TestComponent = () => {
@@ -14,7 +15,7 @@ const TestComponent = () => {
     </div>
   );
 };
-const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+const clock = fakeTimers();
 describe("GlobalProvider", () => {
   test("should provide default context values", () => {
     render(
@@ -60,7 +61,7 @@ describe("GlobalProvider", () => {
     expect(animatedElement1).not.toHaveClass("show");
     expect(animatedElement2).not.toHaveClass("show");
 
-    await wait(300);
+    clock.tick(300);
 
     expect(animatedElement1).toHaveClass("show");
     expect(animatedElement2).toHaveClass("show");

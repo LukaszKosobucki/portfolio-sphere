@@ -1,19 +1,11 @@
 import { fakeTimers } from "@/app/utils/tests/fake-timers";
 import { render } from "@testing-library/react";
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { describe, expect, test } from "bun:test";
 import Galaxy from "./galaxy";
 
 const clock = fakeTimers();
 
 describe("Galaxy Component", () => {
-  beforeEach(() => {
-    document.body.classList.add("dark");
-  });
-
-  afterEach(() => {
-    document.body.classList.remove("dark");
-  });
-
   test("should render wtesthout crashing", () => {
     const { container } = render(<Galaxy />);
     expect(container).toBeInTheDocument();
