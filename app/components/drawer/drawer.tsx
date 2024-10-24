@@ -22,6 +22,7 @@ function Drawer({
         {socials &&
           socials.map((social) => (
             <a
+              data-testid={social.fields.name}
               key={`${social.fields.name}`}
               href={`${social.fields.href}`}
               target="_blank"

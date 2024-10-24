@@ -1,0 +1,23 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Introduction Component Should match snapshot 1`] = `
+"<DocumentFragment>
+  <div
+    class="relative bg-white dark:bg-black"
+  >
+    <div
+      class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16"
+    >
+      <section
+        class="animate"
+      >
+        <article>
+          <p>
+            Mocked rich text content
+          </p>
+        </article>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>"
+`;

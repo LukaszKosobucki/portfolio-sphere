@@ -17,6 +17,7 @@ function Particles() {
     <div className="absolute inset-0 block dark:hidden">
       <div
         id="particles1"
+        data-testid="particles1"
         className="fixed inset-0 rounded-[50%] w-[1px] h-[1px]"
         style={{
           boxShadow: particlesSmall,
@@ -25,6 +26,7 @@ function Particles() {
       ></div>
       <div
         id="particles2"
+        data-testid="particles2"
         className="fixed inset-0 rounded-[50%] w-[1px] h-[1px]"
         style={{
           boxShadow: particlesMedium,
@@ -33,6 +35,7 @@ function Particles() {
       ></div>
       <div
         id="particles3"
+        data-testid="particles3"
         className="fixed inset-0 rounded-[50%] w-[1px] h-[1px]"
         style={{
           boxShadow: particlesLarge,

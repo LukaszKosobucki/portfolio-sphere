@@ -1,0 +1,32 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkItem Component should match snapshot 1`] = `
+"<DocumentFragment>
+  <li
+    class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+  >
+    <div
+      class="text-sm uppercase mb-4"
+    >
+      2023-01-04 - 2023-08-04
+    </div>
+    <div
+      class="text-black dark:text-white font-semibold"
+    >
+      YouGov
+    </div>
+    <div
+      class="text-sm font-semibold"
+    >
+      Junior Software Engineer
+    </div>
+    <article
+      class="prose dark:prose-invert"
+    >
+      <div>
+        Mock Description
+      </div>
+    </article>
+  </li>
+</DocumentFragment>"
+`;

@@ -1,25 +1,22 @@
 "use client";
 
 import {
-  createContext,
   Dispatch,
   ReactNode,
   SetStateAction,
+  createContext,
   useContext,
   useEffect,
   useState,
 } from "react";
 
-// Define the shape of the context value
 type GlobalContextType = {
   isDrawerOpen: boolean;
   setIsDrawerOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-// Create the context
-const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
+export const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
-// Create the provider component
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -39,7 +36,6 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Custom hook to use the GlobalContext in any component
 export const useGlobalContext = () => {
   const context = useContext(GlobalContext);
   if (!context) {

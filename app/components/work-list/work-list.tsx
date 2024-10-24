@@ -1,6 +1,6 @@
 import { fetchSpecificEntries } from "@/app/services/contentful";
+import Container from "@/app/shared/components/container/container";
 import { WORK } from "@/app/utils/consts";
-import Container from "../navbar/container";
 import WorkItem from "./work-item/work-item";
 
 async function WorkList() {
@@ -9,6 +9,7 @@ async function WorkList() {
     multiple: true,
     order: "-fields.dateStart",
   });
+
   return (
     <main id="work" className="scroll-mt-16">
       <div className="pt-5 pb-5">

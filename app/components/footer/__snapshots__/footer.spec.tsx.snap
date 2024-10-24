@@ -1,0 +1,167 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Should match snapshot 1`] = `
+"<DocumentFragment>
+  <footer
+    class="relative bg-white dark:bg-black"
+  >
+    <div
+      class="animate"
+    >
+      <section
+        class="py-5"
+      >
+        <div
+          class="w-full h-full mx-auto px-5 max-w-screen-md"
+        >
+          <div
+            class="flex items-center justify-center sm:justify-end"
+          >
+            <button
+              aria-label="Back to top of page"
+              class="group flex w-fit p-1.5 gap-1.5 text-sm items-center border rounded hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+              data-testid="back-to-top-button"
+              id="back-to-top"
+            >
+              <svg
+                class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-90"
+                fill="none"
+                height="20"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  class="scale-x-0 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+                  x1="19"
+                  x2="5"
+                  y1="12"
+                  y2="12"
+                />
+                <polyline
+                  class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+                  points="12 19 5 12 12 5"
+                />
+              </svg>
+              <div
+                class="w-full group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out"
+              >
+                Back to top
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class=" py-5 overflow-hidden whitespace-nowrap border-t border-black/10 dark:border-white/25"
+      >
+        <div
+          class="w-full h-full mx-auto px-5 max-w-screen-md"
+        >
+          <div
+            class="h-full grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
+            <div
+              class="order-2 sm:order-1 flex flex-col items-center justify-center sm:items-start"
+            >
+              <div
+                class="text-sm mt-2"
+              >
+                <a
+                  class="group flex gap-1 w-fit font-semibold text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+                  href="//assets.ctfassets.net/p44hxzq21dxq/YTJPmJFknLpHW9LRZmp4X/8d03e0740fcd65ebf4a4fb56c72fc2d4/lukasz-kosobucki-resume.pdf"
+                  target="_blank"
+                >
+                  <svg
+                    class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white -rotate-90"
+                    fill="none"
+                    height="20"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      class="scale-x-70 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+                      x1="22"
+                      x2="8"
+                      y1="12"
+                      y2="12"
+                    />
+                    <polyline
+                      class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+                      points="15 19 8 12 15 5"
+                    />
+                    <line
+                      x1="7"
+                      x2="7"
+                      y1="5"
+                      y2="19"
+                    />
+                  </svg>
+                  Download my resume
+                </a>
+              </div>
+            </div>
+            <div
+              class="order-1 sm:order-2 flex justify-center sm:justify-end"
+            >
+              <div
+                class="flex flex-wrap gap-1 items-center justify-center"
+              >
+                <a
+                  aria-label="Lukasz Kosobucki's Portfolio on Email"
+                  class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                  href="mailto:business@lukaszkosobucki.pl"
+                  target="_blank"
+                >
+                  <svg
+                    class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+                  >
+                    <use
+                      href="/social.svg#email"
+                    />
+                  </svg>
+                </a>
+                <a
+                  aria-label="Lukasz Kosobucki's Portfolio on Github"
+                  class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                  href="https://github.com/LukaszKosobucki"
+                  target="_blank"
+                >
+                  <svg
+                    class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+                  >
+                    <use
+                      href="/social.svg#github"
+                    />
+                  </svg>
+                </a>
+                <a
+                  aria-label="Lukasz Kosobucki's Portfolio on LinkedIn"
+                  class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                  href="https://www.linkedin.com/in/lukasz-kosobucki/"
+                  target="_blank"
+                >
+                  <svg
+                    class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+                  >
+                    <use
+                      href="/social.svg#linkedin"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+</DocumentFragment>"
+`;

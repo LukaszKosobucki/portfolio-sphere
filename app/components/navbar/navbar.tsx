@@ -1,9 +1,9 @@
 "use client";
 
 import Hamburger from "@/app/components/hambuger/hamburger";
+import Container from "@/app/shared/components/container/container";
 import { Entry, EntrySkeletonType } from "contentful";
 import { useEffect, useState } from "react";
-import Container from "./container";
 
 function Navbar({
   socials,
@@ -35,7 +35,11 @@ function Navbar({
   }, []);
 
   return (
-    <header id="header" className={` ${scrolled ? "scrolled" : ""} fixed top-0 w-full h-16 z-50`}>
+    <header
+      id="header"
+      data-testid="header"
+      className={` ${scrolled ? "scrolled" : ""} fixed top-0 w-full h-16 z-50`}
+    >
       <Container size="md">
         <div className="relative h-full w-full">
           <div className="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
@@ -51,6 +55,7 @@ function Navbar({
               {socials &&
                 socials.map((social) => (
                   <a
+                    data-testid={social.fields.name}
                     key={`${social.fields.name}`}
                     href={`${social.fields.href}`}
                     target="_blank"
