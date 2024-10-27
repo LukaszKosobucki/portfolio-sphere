@@ -9,15 +9,11 @@ exports[`ProjectList Component should match the snapshot 1`] = `
     <div
       class="space-y-4"
     >
-      <div
-        class="flex justify-between"
+      <p
+        class="page-heading"
       >
-        <p
-          class="font-semibold text-black dark:text-white"
-        >
-          Projects
-        </p>
-      </div>
+        Projects
+      </p>
       <ul
         class="space-y-4"
       >

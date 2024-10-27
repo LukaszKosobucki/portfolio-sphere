@@ -10,9 +10,8 @@ async function ProjectList() {
   return (
     <section id="projects" className="animate scroll-mt-16">
       <div className="space-y-4">
-        <div className="flex justify-between">
-          <p className="font-semibold text-black dark:text-white">Projects</p>
-        </div>
+        <p className="page-heading">Projects</p>
+
         <ul className="space-y-4">
           {projects.map((project) => (
             <ProjectItem key={project.fields.name?.toString()} entry={project} />

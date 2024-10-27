@@ -27,12 +27,12 @@ exports[`WorkList Component should match snapshot 1`] = `
       >
         <ul>
           <li
-            class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+            class="animate border-b border-black/10 dark:border-white/25 mt-4 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
           >
             <div
               class="text-sm uppercase mb-4"
             >
-              Sep 2023 - continuing
+              Sep 2023 - present
             </div>
             <div
               class="text-black dark:text-white font-semibold"
@@ -45,7 +45,7 @@ exports[`WorkList Component should match snapshot 1`] = `
               Junior Software Engineer
             </div>
             <article
-              class="prose dark:prose-invert"
+              class="prose dark:prose-invert prose-p:text-justify"
             >
               <p>
                 Mocked rich text content
@@ -53,7 +53,7 @@ exports[`WorkList Component should match snapshot 1`] = `
             </article>
           </li>
           <li
-            class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+            class="animate border-b border-black/10 dark:border-white/25 mt-4 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
           >
             <div
               class="text-sm uppercase mb-4"
@@ -71,7 +71,7 @@ exports[`WorkList Component should match snapshot 1`] = `
               Intern Software Engineer
             </div>
             <article
-              class="prose dark:prose-invert"
+              class="prose dark:prose-invert prose-p:text-justify"
             >
               <p>
                 Mocked rich text content
