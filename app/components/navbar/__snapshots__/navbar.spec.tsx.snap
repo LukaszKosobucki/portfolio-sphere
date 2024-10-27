@@ -1,0 +1,163 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component Should match snapshot 1`] = `
+"<DocumentFragment>
+  <header
+    class="  fixed top-0 w-full h-16 z-50"
+    data-testid="header"
+    id="header"
+  >
+    <div
+      class="w-full h-full mx-auto px-5 max-w-screen-md"
+    >
+      <div
+        class="relative h-full w-full"
+      >
+        <div
+          class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold"
+        >
+          <a
+            class="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+            href="/"
+          >
+            <div>
+              Author Name
+            </div>
+          </a>
+        </div>
+        <div
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <nav
+            class="hidden md:flex items-center justify-center text-sm gap-1"
+          >
+            <a
+              aria-label="Test Navbar on Email"
+              class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+              data-testid="Email"
+              href="mailto:business@lukaszkosobucki.pl"
+              target="_blank"
+            >
+              <svg
+                class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+              >
+                <use
+                  href="/social.svg#email"
+                />
+              </svg>
+            </a>
+            <a
+              aria-label="Test Navbar on Github"
+              class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+              data-testid="Github"
+              href="https://github.com/LukaszKosobucki"
+              target="_blank"
+            >
+              <svg
+                class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+              >
+                <use
+                  href="/social.svg#github"
+                />
+              </svg>
+            </a>
+            <a
+              aria-label="Test Navbar on LinkedIn"
+              class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+              data-testid="LinkedIn"
+              href="https://www.linkedin.com/in/lukasz-kosobucki/"
+              target="_blank"
+            >
+              <svg
+                class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+              >
+                <use
+                  href="/social.svg#linkedin"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+        <div
+          class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1"
+        >
+          <button
+            aria-label="Toggle light and dark theme"
+            class="hidden md:flex size-9 rounded-full p-2 items-center justify-center bg-transparent hover:bg-black/5 dark:hover:bg-white/20 stroke-current hover:stroke-black hover:dark:stroke-white border border-black/10 dark:border-white/25 transition-colors duration-300 ease-in-out"
+            data-testid="theme-switcher"
+            id="header-theme-button"
+          >
+            <svg
+              fill="none"
+              height="24"
+              id="sun"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="5"
+              />
+              <path
+                d="M12 1v2"
+              />
+              <path
+                d="M12 21v2"
+              />
+              <path
+                d="M4.22 4.22l1.42 1.42"
+              />
+              <path
+                d="M18.36 18.36l1.42 1.42"
+              />
+              <path
+                d="M1 12h2"
+              />
+              <path
+                d="M21 12h2"
+              />
+              <path
+                d="M4.22 19.78l1.42-1.42"
+              />
+              <path
+                d="M18.36 5.64l1.42-1.42"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Open drawer with menu"
+            class="flex md:hidden size-9 rounded-full p-2 items-center justify-center bg-transparent hover:bg-black/5 dark:hover:bg-white/20 stroke-current hover:stroke-black hover:dark:stroke-white border border-black/10 dark:border-white/25 transition-colors duration-300 ease-in-out"
+            data-testid="hamburger"
+            id="header-theme-button"
+          >
+            <svg
+              fill="none"
+              height="24"
+              id="menu"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M3 12h18"
+              />
+              <path
+                d="M3 6h18"
+              />
+              <path
+                d="M3 18h18"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>"
+`;

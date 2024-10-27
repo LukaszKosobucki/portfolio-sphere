@@ -12,6 +12,7 @@ export default function ThemeSwitcher({
 
   return (
     <button
+      data-testid="theme-switcher"
       onClick={() => (resolvedTheme === "light" ? setTheme("dark") : setTheme("light"))}
       id="header-theme-button"
       aria-label={`Toggle light and dark theme`}

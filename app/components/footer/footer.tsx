@@ -1,7 +1,7 @@
 "use client";
 
+import Container from "@/app/shared/components/container/container";
 import { Entry, EntrySkeletonType } from "contentful";
-import Container from "../navbar/container";
 
 function Footer({
   socials,
@@ -26,6 +26,7 @@ function Footer({
           <Container size="md">
             <div className="flex items-center justify-center sm:justify-end">
               <button
+                data-testid="back-to-top-button"
                 onClick={(event) => goBackToTop(event)}
                 id="back-to-top"
                 aria-label="Back to top of page"

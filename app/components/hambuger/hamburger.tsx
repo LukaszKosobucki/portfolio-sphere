@@ -11,9 +11,10 @@ function Hamburger() {
     <>
       <ThemeSwitcher />
       <button
+        data-testid="hamburger"
         onClick={() => setIsDrawerOpen(!isDrawerOpen)}
         id="header-theme-button"
-        aria-label={`Toggle light and dark theme`}
+        aria-label={`Open drawer with menu`}
         className={cn(
           "flex md:hidden",
           "size-9 rounded-full p-2 items-center justify-center",

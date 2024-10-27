@@ -1,0 +1,5 @@
+[test]
+preload = ["./happydom.ts", "./testing-library.ts"]
+coverageThreshold = { lines = 0.9, functions = 0.9 }
+coverageReporter  = ["lcov"]
+coverageDir = "coverage"

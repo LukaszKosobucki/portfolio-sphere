@@ -1,0 +1,86 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkList Component should match snapshot 1`] = `
+"<DocumentFragment>
+  <main
+    class="scroll-mt-16"
+    id="work"
+  >
+    <div
+      class="pt-5 pb-5"
+    >
+      <div
+        class="w-full h-full mx-auto px-5 max-w-screen-md"
+      >
+        <div
+          class="animate page-heading"
+        >
+          Work
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex-1 py-5"
+    >
+      <div
+        class="w-full h-full mx-auto px-5 max-w-screen-md"
+      >
+        <ul>
+          <li
+            class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+          >
+            <div
+              class="text-sm uppercase mb-4"
+            >
+              Sep 2023 - continuing
+            </div>
+            <div
+              class="text-black dark:text-white font-semibold"
+            >
+              YouGov
+            </div>
+            <div
+              class="text-sm font-semibold"
+            >
+              Junior Software Engineer
+            </div>
+            <article
+              class="prose dark:prose-invert"
+            >
+              <p>
+                Mocked rich text content
+              </p>
+            </article>
+          </li>
+          <li
+            class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+          >
+            <div
+              class="text-sm uppercase mb-4"
+            >
+              Sep 2022 - Aug 2023
+            </div>
+            <div
+              class="text-black dark:text-white font-semibold"
+            >
+              Capgemini
+            </div>
+            <div
+              class="text-sm font-semibold"
+            >
+              Intern Software Engineer
+            </div>
+            <article
+              class="prose dark:prose-invert"
+            >
+              <p>
+                Mocked rich text content
+              </p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>"
+`;

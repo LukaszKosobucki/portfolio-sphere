@@ -1,5 +1,5 @@
+import { cn } from "@/app/utils/cn";
 import React from "react";
-import { cn } from "../../utils/cn";
 
 type Props = {
   size: "sm" | "md" | "lg" | "xl" | "2xl";
