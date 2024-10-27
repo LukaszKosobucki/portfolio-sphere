@@ -43,7 +43,7 @@ describe("WorkItem Component", () => {
     render(<WorkItem entry={mockEntryWithoutEndDate} />);
 
     expect(formatDate).toHaveBeenCalledWith("2023-09-04");
-    expect(screen.getByText("2023-09-04 - continuing")).toBeInTheDocument();
+    expect(screen.getByText("2023-09-04 - present")).toBeInTheDocument();
   });
 
   test("should render the name and workTitle", () => {
@@ -56,7 +56,10 @@ describe("WorkItem Component", () => {
   test("should render the description", () => {
     render(<WorkItem entry={mockWorkItem} />);
 
-    expect(documentToReactComponents).toHaveBeenCalledWith(mockWorkItem.fields.description);
+    expect(documentToReactComponents).toHaveBeenCalledWith(
+      mockWorkItem.fields.description,
+      expect.any(Object),
+    );
     expect(screen.getByText("Mock Description")).toBeInTheDocument();
   });
 });

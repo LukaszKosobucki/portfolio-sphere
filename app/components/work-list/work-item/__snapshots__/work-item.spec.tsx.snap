@@ -3,7 +3,7 @@
 exports[`WorkItem Component should match snapshot 1`] = `
 "<DocumentFragment>
   <li
-    class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
+    class="animate border-b border-black/10 dark:border-white/25 mt-4 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none"
   >
     <div
       class="text-sm uppercase mb-4"
@@ -21,7 +21,7 @@ exports[`WorkItem Component should match snapshot 1`] = `
       Junior Software Engineer
     </div>
     <article
-      class="prose dark:prose-invert"
+      class="prose dark:prose-invert prose-p:text-justify"
     >
       <div>
         Mock Description
