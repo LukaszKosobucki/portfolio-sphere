@@ -3,10 +3,10 @@
 exports[`Introduction Component Should match snapshot 1`] = `
 "<DocumentFragment>
   <div
-    class="relative bg-white dark:bg-black"
+    class=" bg-white dark:bg-black h-screen sticky top-10"
   >
     <div
-      class="mx-auto max-w-screen-sm p-5"
+      class="mx-auto max-w-screen-sm p-5 space-y-24 pt-[20%] "
     >
       <section
         class="animate"
