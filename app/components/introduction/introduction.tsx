@@ -8,8 +8,8 @@ async function Introduction() {
     title: "About me",
   });
   return (
-    <div className=" bg-white dark:bg-black h-screen sticky top-10">
-      <div className="mx-auto max-w-screen-sm p-5 space-y-24 pt-[20%] ">
+    <div className="relative bg-white dark:bg-black">
+      <div className="mx-auto max-w-screen-sm p-5 py-24">
         <section className="animate">
           <article className="text-justify">
             {documentToReactComponents(aboutMe[0].fields.description as Document)}

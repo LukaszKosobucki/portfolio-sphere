@@ -7,7 +7,7 @@ exports[`Contact Component Should match snapshot 1`] = `
   >
     <div>
       <p
-        class="page-heading"
+        class="page-heading pb-3"
       >
         Let's Connect
       </p>

@@ -8,7 +8,7 @@ function Contact({
   return (
     <section className="animate">
       <div>
-        <p className="page-heading">Let&apos;s Connect</p>
+        <p className="page-heading pb-3">Let&apos;s Connect</p>
         <p>Reach out to me via email or on social media.</p>
         <div className="grid grid-rows-3 gap-y-2 mt-4 auto-cols-min">
           {socials &&
