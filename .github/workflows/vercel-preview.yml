@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+      - name: Checkout branch from triggered workflow
+        run: |
+          git fetch origin ${{ github.event.workflow_run.head_branch }}
+          git checkout ${{ github.event.workflow_run.head_branch }}
       - name: Setup Node
         uses: oven-sh/setup-bun@v2
       - name: install Vercel CLI
