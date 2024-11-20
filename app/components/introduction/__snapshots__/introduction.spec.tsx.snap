@@ -6,7 +6,7 @@ exports[`Introduction Component Should match snapshot 1`] = `
     class="relative bg-white dark:bg-black"
   >
     <div
-      class="mx-auto max-w-screen-sm p-5"
+      class="mx-auto max-w-screen-sm p-5 py-24"
     >
       <section
         class="animate"

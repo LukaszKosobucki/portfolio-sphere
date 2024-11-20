@@ -45,17 +45,17 @@ export default async function Home() {
       />
       <Introduction />
       <div className="relative bg-white dark:bg-black">
-        <div className="mx-auto max-w-screen-sm">
+        <div className="mx-auto max-w-screen-sm py-24">
           <WorkList />
         </div>
       </div>
       <div className="relative bg-white dark:bg-black">
-        <div className="mx-auto max-w-screen-sm pb-12 p-5">
+        <div className="mx-auto max-w-screen-sm py-24 p-5">
           <ProjectList />
         </div>
       </div>
       <div className="relative bg-white dark:bg-black">
-        <div className="mx-auto max-w-screen-sm pb-12 p-5">
+        <div className="mx-auto max-w-screen-sm py-24 p-5">
           <Contact socials={socials} />
         </div>
       </div>

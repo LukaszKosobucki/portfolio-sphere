@@ -68,7 +68,7 @@ article {
 }
 
 .page-heading {
-  @apply font-semibold text-black dark:text-white text-xl;
+  @apply font-semibold text-black dark:text-white text-xl uppercase;
 }
 
 .blend {
@@ -88,9 +88,7 @@ article {
 .animate {
   opacity: 0;
   transform: translateY(50px);
-  transition:
-    opacity 1s ease,
-    transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .animate.show {

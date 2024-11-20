@@ -9,7 +9,7 @@ async function Introduction() {
   });
   return (
     <div className="relative bg-white dark:bg-black">
-      <div className="mx-auto max-w-screen-sm p-5">
+      <div className="mx-auto max-w-screen-sm p-5 py-24">
         <section className="animate">
           <article className="text-justify">
             {documentToReactComponents(aboutMe[0].fields.description as Document)}
