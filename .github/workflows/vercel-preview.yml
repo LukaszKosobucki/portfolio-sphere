@@ -7,9 +7,6 @@ env:
   CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
 on:
   workflow_run:
-    workflows: ["Build"]
-    types:
-      - completed
     branches-ignore:
       - main
   workflow_dispatch:
@@ -17,13 +14,9 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-            fetch-depth: 0
-            ref: ${{ github.event.workflow_run.head_sha }}
       - name: Setup Node
         uses: oven-sh/setup-bun@v2
       - name: install Vercel CLI
